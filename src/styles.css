@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --color-gray-700: #0d0d0d;
+  --color-gray-600: #1a1a1a;
+  --color-gray-500: #262626;
+  --color-gray-400: #333;
+  --color-gray-300: #808080;
+  --color-gray-200: #d9d9d9;
+  --color-gray-100: #f2f2f2;
+  --color-blue-dark: #1e6f9f;
+  --color-error: #ff4d4f;
+  --color-blue: #4ea8de;
+  --color-purple: #8284fa;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background: var(--color-gray-600);
+}
+
+.container {
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.amount {
+  border-radius: 999px;
+  background: var(--color-gray-400);
+  color: var(--color-gray-200);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  padding: 2px 8px;
+}
+
+.ml-8 {
+  margin-left: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
