@@ -9,16 +9,23 @@
   --color-gray-200: #d9d9d9;
   --color-gray-100: #f2f2f2;
   --color-blue-dark: #1e6f9f;
+  --color-blue: #4EA8DE;
   --color-error: #ff4d4f;
   --color-blue: #4ea8de;
   --color-purple: #8284fa;
+  --color-purple-dark: #5E60CE;
 }
+
 
 body {
   margin: 0;
   padding: 0;
   font-family: Inter, Arial, "Helvetica Neue", Helvetica, sans-serif;
   background: var(--color-gray-600);
+}
+
+p {
+  margin: 0;
 }
 
 .container {

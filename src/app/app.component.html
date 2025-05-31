@@ -34,22 +34,19 @@
 
       <div>
         <span class="title color-blue">Завершено</span>
-        <span class="amount ml-8">2 из {{ todos.length }}</span>
+        <span class="amount ml-8">{{completedTodos}} из {{ todos.length }}</span>
       </div>
     </div>
 
-    @if (todos.length > 0) {
-    } @else {
-      <div class="todo__list-empty">
-        <img class="mb-16" src="assets/clipboard.png" alt="clipboard icon" />
-        <p class="todo__list-empty-text text-bold">
-          У вас еще нет зарегистрированных заданий
-        </p>
-        <p class="todo__list-empty-text">
-          Создавайте задачи и упорядочивайте свои дела.
-        </p>
-      </div>
-
+    @if (hasTodos) { @for (todo of todos; track todo.id) {
+    <div class="todo-list">
+      <app-todo-item
+        [todo]="todo"
+        (delete)="deleteTodo($event)"
+      ></app-todo-item>
+    </div>
+    } } @else {
+    <app-todo-empty></app-todo-empty>
     }
   </div>
 </div>

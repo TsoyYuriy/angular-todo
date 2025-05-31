@@ -1,0 +1,70 @@
+.todo__item {
+  border-radius: 8px;
+  border: 1px solid var(--color-gray-400);
+  background: var(--color-gray-500);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.todo__text {
+  color: var(--color-gray-100);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.todo__btn-delete {
+  background: url("../../../assets/trash-icon.svg") no-repeat center center;
+  border: none;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: auto;
+
+  &:hover {
+    background: var(--color-gray-400) url("../../../assets/trash-icon-red.svg")
+      no-repeat center center;
+    border-radius: 4px;
+  }
+}
+
+.todo__checkbox {
+  display: none;
+}
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 2px solid var(--color-blue);
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url("../../../assets/check-icon.svg") no-repeat center center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: .1s ease-in;
+  }
+}
+
+.todo__checkbox:checked + .custom-checkbox::before {
+  transform: translate(-50%, -50%) scale(1);
+  border-radius: 50%;
+  border: 2px solid var(--color-purple-dark); 
+}
+
+.text-completed {
+  text-decoration: line-through;
+  color: var(--color-gray-300);
+}
